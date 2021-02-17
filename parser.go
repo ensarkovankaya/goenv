@@ -10,7 +10,7 @@ import (
 func find(env string) (string, bool) {
 	for _, value := range os.Environ() {
 		if strings.HasPrefix(value, env) {
-			return value[len(value)+1:], true
+			return value[len(env)+1:], true
 		}
 	}
 	return "", false
